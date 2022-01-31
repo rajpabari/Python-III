@@ -1,0 +1,216 @@
+Raj Pabari Python III Exam 1
+
+1. (1 pt) Write a program that will print the name of your favorite food.
+
+print("Burrito")
+
+2. (1 pt) What does this program print?
+x=15
+#x=x+1
+#x+1
+print("x=",x)
+
+PRINTS THE FOLLOWING:
+x= 15
+
+3. (1 pt) What does this program print?
+x=12
+y=13
+print("x+y", x+y)
+
+PRINTS THE FOLLOWING:
+x+y 25
+
+4. (3 pts) Write a program that asks the user to type in their first name, then with a
+different statement ask the user for their last name and store it in a different
+variable. Last, print both the first and last name on the same line.
+
+first = input("Your first name? ")
+last = input("Your last name? ")
+print("Your name is", first, last)
+
+5. (1 pt) What does this print?
+x=True
+if x:
+    print ("AAA")
+else:
+    print ("BBB")
+
+PRINTS THE FOLLOWING:
+AAA
+
+6. (2 pts) Write a line of code that will take an original item price from the user.
+* The number should be stored as a float, not a string.
+
+price = float(input("What is the original price of the item? "))
+
+7. (2 pts) Continuing from the prior question, calculate the final price of the item if
+you add a 6% tax.
+
+price = round(float(input("What is the original price of the item? ")) * 1.06, 2)
+
+8. (2 pts) Continuing from the prior question, print the amount you calculated
+(original price + tax) along with a label (in dollars).
+
+price = round(float(input("What is the original price of the item? ")) * 1.06, 2)
+print("The price of your item after tax is $" + str(price))
+
+9. (3 pts) Next to each section, list the number that it prints out:
+# Section 1
+x=4
+x=30-x/2
+print(x)
+
+PRINTS THE FOLLOWING:
+28
+
+# Section 2
+x=5
+x-=3
+print (x)
+
+PRINTS THE FOLLOWING:
+2
+
+# Section 3 
+x=50
+print(x+1)
+print(x+1)
+
+PRINTS THE FOLLOWING:
+51 
+51
+
+# Section 4
+x= 3 > 4
+print(x)
+if x:
+    print("A")
+else:
+    print("B")
+
+PRINTS THE FOLLOWING:
+False
+B
+
+# Section 5
+x=6
+x+4
+print(x+10)
+
+PRINTS THE FOLLOWING:
+16
+
+# Section 6
+print (11%2)
+
+PRINTS THE FOLLOWING:
+1
+
+10. (2 pts) Write code that prints the first character of the string, and then the last
+character.
+my_text ="1234567890"
+print("First character:",my_text[0],"and last character:",my_text[-1])
+
+11. (2 pts) Cross out the variable names that are not legal in Python.
+LEGAL: ds9, VOYAGER, the_void, paleMoonlight, engine, totalAmount
+ILLEGAL: 2sttng, Darmok%, city size, amount$
+
+12. (4 pts) Write a Python program that will ask the user for their percentage grade.
+Then print if it is an A ( ≥ 90), passing ( ≤ 60) or failing.
+
+grade = int(input("What is your percentage grade? "))
+if grade >= 90:
+    print("You got an A")
+elif grade >= 60:
+    print("You passed but did not get an A")
+else:
+    print("You failed")
+
+13. (1 pt) How do you know if you should create a “while” loop or a “for” loop?
+
+If you know how many times you should be running some chunk of code, 
+or are iterating through each item in a collection, you should use a for loop.
+Otherwise, if you are running until a condition is met/not met, you should
+use a while loop.
+
+14. (3 pts) What does this code print?
+a = 6>5
+b = 7<=6
+c = 15!=15
+d = 15==15
+print (a,b,c,d)
+if a and b:
+    print ("X")
+else:
+    print ("O")
+
+PRINTS THE FOLLOWING:
+True False False True
+O
+
+15. (2 pts) Write a for loop that will print the numbers from 1 to 50 (inclusive).
+
+for i in range(50):
+    print(i+1)
+
+16. (3 pts) Write a “while” loop that counts by 5’s from 100 down to 0 (inclusive).
+
+counter = 100
+
+while (counter >= 0):
+    print(counter)
+    counter -= 5
+
+17. (2 pts) Write a program that will use two for loops to print out the following
+rectangle made of asterisks (*):
+
+rowCount = 6
+colCount = 11
+
+rowStr = ""
+
+for i in range(colCount):
+    rowStr += "* "
+
+for i in range(rowCount):
+    print(rowStr)
+
+18. (2 pts) Explain how red = ( 255, 0, 0) represents a color.
+
+It defines an RGB tuple where the numbers give a mix of red, green, and blue colors.
+255 is the maximum value and 0 is the minimum. This tuple has a maximum amount of red,
+and a minimum amount of (none of) green and blue, so the color is red.
+
+19. (2 pts) Draw a picture that shows how computer coordinates relate to the screen.
+
+Origin is in the top left corner of the screen.
+Positive x is to the right of the origin, negative x to the left of the origin.
+Positive y is below the origin, negative y is above the origin.
+
+20. (2 pts) Use a for loop to sum the items in this list: 
+list=[4,7,2,4,2,4,6]
+
+ans = 0
+for i in list:
+    ans += i
+print("The sum is:", ans)
+
+21. (3 pts) Mark what is wrong with this code:
+name=int(input("Enter username:"))
+password=int(input("Enter password:"))
+if name == craven or password == mypass:
+    input("Access granted")
+else
+    input("Access denied.")
+
+PROBLEMS:
+1) No colon after the else
+2) The username and password should be strings, not integers. Remove the int() statements
+3) The name should be compared to the string "craven", 
+and the password compared to the string "mypass", or the variables
+craven and mypass need to be defined somewhere if they are storing strings.
+4) Instead of doing an input for access granted and access denied, 
+both should be print statements.
+5) The user should only be granted access if 
+the name is correct AND the password is correct, rather than OR.

@@ -1,0 +1,54 @@
+Raj Pabari Bitmapping Quiz
+
+1. This is about the time that many people learning to program run into problems
+   with Windows hiding file extensions. Briefly explain how to make Windows show
+   file extensions. If you don't remember, go back to the ``Before getting started''
+   section.
+ 
+I am using a Mac instead of a Windows machine. In VSCode, the file explorer always shows
+the file extension. In the settings of Mac's file explorer, there is a setting to show file extensions.
+
+2. (5 pts) For the following file extensions:
+ 
+    
+   * .jpg - PHOTOS
+   * .wav - UNCOMPRESSED SOUNDS
+   * .gif - GRAPHIC ART
+   * .png - GRAPHIC ART
+   * .ogg - SOUNDS
+   * .bmp - UNCOMPRESSED IMAGES
+   * .mp3 - SOUNDS
+    
+   ...match the extension to the category it best fits:
+    
+   * Photos
+   * Graphic art
+   * Uncompressed images
+   * Songs and sound effects
+   * Uncompressed sounds
+    
+3. Should an image be loaded inside the main program loop, or before it?
+   Should the program blit the image in the main program loop or before it?
+ 
+An image should be loaded before the main program loop, but blit inside the loop.
+
+4. How can a person change an image from one format to another? For example, how
+   do you change a .jpg to a .gif? Why does changing the file extension not really
+   work? (Ask if you can't figure it out.)
+ 
+Using simple online tools, it's easy to change file extensions. However,
+the reason for not using JPGs is that they slightly change the colors, and converting
+to a PNG or GIF after the colors have been distorted by a JPG doesn't serve much purpose.
+
+5. Explain why an image that was originally saved as a .jpg doesn't work with
+   setting a background color even after it is converted to a .png.
+ 
+JPGs distort the background color slightly, and converting to a PNG doesn't fix this distortion.
+
+6. Briefly explain how to play background music in a game, and how to
+   automatically start playing a new song when the current song ends.
+   Check the ``examples'' section, and look under the graphics examples
+   for example code on how to do this.
+
+You can play the next queued song from the main program loop if the current song is finished.
+If the current song is not finished, do nothing and continue playing it.
